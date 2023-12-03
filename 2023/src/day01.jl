@@ -1,4 +1,4 @@
-module Day01
+module day01
     using ..aoc23
     """
     day01()
@@ -11,7 +11,7 @@ module Day01
         "eno" => "1", "owt" => "2", "eerht" => "3", "ruof" => "4", "evif" => "5", "xis" => "6", "neves" => "7", "thgie" => "8", "enin" => "9"
         )
 
-    function day01(input::String = readInput(01))
+    function solution(input::String = readInput(01))
         s0 = 0
         s1 = 0
 

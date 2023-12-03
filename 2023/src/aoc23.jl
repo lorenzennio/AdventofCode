@@ -16,13 +16,13 @@ module aoc23
 
     # Export a function `dayXY` for each day:
     for d in solvedDays
-        modSymbol = Symbol(@sprintf("Day%02d", d))
-        dsSymbol = Symbol(@sprintf("day%02d", d))
+        modSymbol = Symbol(@sprintf("day%02d", d))
+        solSymbol = Symbol(@sprintf("solution%02d", d))
         @eval begin
-            function $dsSymbol(input::String = aoc23.readInput($d))
-                return aoc23.$modSymbol.$dsSymbol(input)
+            function $solSymbol(input::String = aoc23.readInput($d))
+                return aoc23.$modSymbol.solution(input)
             end
-            export $dsSymbol
+            export $solSymbol
         end
     end
 end # module aoc23

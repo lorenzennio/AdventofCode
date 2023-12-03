@@ -21,16 +21,16 @@ function create_files(year::Int, day::Int)
     touch(src)
 
     template = """ 
-    module Day$d
+    module day$d
         using ..aoc$y
 
         \"""
-            day$d()
+            solution()
 
         Solves the two puzzles of day $d. 
         \"""
 
-        function day$d(input::String = readInput($d))
+        function solution(input::String = readInput($d))
 
         end
     end 
@@ -38,5 +38,18 @@ function create_files(year::Int, day::Int)
     """
     open(src, "a") do io
         write(io, template)
+    end
+    
+    test = """
+
+    @testset "Day $d" begin
+        @test aoc$y.day$d.solution() == [s0 , s1]
+    end
+    
+
+    """
+
+    open("20$y/test/runtests.jl", "a") do io
+        write(io, test)
     end
 end

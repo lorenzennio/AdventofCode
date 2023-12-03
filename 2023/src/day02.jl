@@ -1,4 +1,4 @@
-module Day02
+module day02
     using ..aoc23
     """
     day02()
@@ -50,7 +50,7 @@ module Day02
         return games
     end
 
-    function day02(input::String = readInput(01))
+    function solution(input::String = readInput(02))
         games = getgames(input)
         
         s0 = 0

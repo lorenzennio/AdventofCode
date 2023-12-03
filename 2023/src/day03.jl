@@ -1,5 +1,5 @@
  
-module Day03
+module day03
     using ..aoc23
 
     """
@@ -8,7 +8,7 @@ module Day03
     Solves the two puzzles of day 03. 
     """
     
-    function day03(input::String = readInput(03))
+    function solution(input::String = readInput(03))
 
         grid = split(input, "\n")
         glen = length(grid[1])
