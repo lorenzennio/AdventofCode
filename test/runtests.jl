@@ -1,6 +1,6 @@
 using AdventOfCode
 using Test
 
-@testset "AdventOfCode.jl" begin
+@testset "aoc.jl" begin
     # Write your tests here.
 end

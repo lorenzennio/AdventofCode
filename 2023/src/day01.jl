@@ -1,5 +1,5 @@
 module Day01
-    using ..AdventOfCode23
+    using ..aoc23
     """
     day01()
 

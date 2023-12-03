@@ -1,4 +1,4 @@
-name = "AdventOfCode"
+name = "aoc"
 uuid = "e10f8517-2652-4060-87e1-36285231a80c"
 authors = ["Lorenz Gaertner <lorenz.gaertner@gmail.com>"]
 version = "1.0.0-DEV"

@@ -10,3 +10,33 @@ function readInput(day::Int, directory::String)
     path = joinpath(directory, "../inputs", @sprintf("day%02d.txt", day))
     return readInput(path)
 end
+
+function create_files(year::Int, day::Int)
+    y = string(year)
+    d = @sprintf("%02d", day)
+
+    touch("20$y/inputs/day$d.txt")
+
+    src = "20$y/src/day$d.jl"
+    touch(src)
+
+    template = """ 
+    module Day$d
+        using ..aoc$y
+
+        \"""
+            day$d()
+
+        Solves the two puzzles of day $d. 
+        \"""
+
+        function day$d(input::String = readInput($d))
+
+        end
+    end 
+
+    """
+    open(src, "a") do io
+        write(io, template)
+    end
+end
