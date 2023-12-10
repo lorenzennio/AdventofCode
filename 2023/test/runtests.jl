@@ -19,8 +19,13 @@ end
 @testset "Day 05" begin
     @test aoc23.day05.solution() == (551761867, 57451709)
 end
+
 @testset "Day 06" begin
     @test aoc23.day06.solution() == (114400, 21039729)
+end
+
+@testset "Day 07" begin
+    @test aoc23.day07.solution() == (249726565, 251135960)
 end
 
 
