@@ -29,3 +29,9 @@ end
 end
 
 
+
+@testset "Day 08" begin
+    @test aoc23.day08.solution() == (11309, 13740108158591)
+end
+
+
