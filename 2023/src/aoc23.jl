@@ -8,6 +8,7 @@ module aoc23
 
 
     solvedDays = [parse(Int, match(r"\d+", file).match) for file in Base.Filesystem.readdir(@__DIR__) if isnothing(match(r"aoc", file))]
+    println("Loading days\n", solvedDays)
     
 		# Include the source files:
     for day in solvedDays
