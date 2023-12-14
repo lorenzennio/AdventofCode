@@ -1,7 +1,6 @@
  
 module day10
     using ..aoc23
-    using DelimitedFiles
     """
         solution()
 
