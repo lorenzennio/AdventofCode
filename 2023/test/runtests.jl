@@ -41,3 +41,9 @@ end
 end
 
 
+
+@testset "Day 10" begin
+    @test aoc23.day10.solution() == (6979.0, 443)
+end
+
+
